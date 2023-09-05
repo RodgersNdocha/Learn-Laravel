@@ -20,3 +20,11 @@ Route::namespace('\App\Http\controllers')->group(function(){
     Route::get('/blogdetails','PageController@blogdetails')->name('blogdetails');
     Route::get('/test', 'TestController@index')->name('TestController');
 });
+Route::view('/admin', 'admin.pages.dashboard');
+
+
+// admin routes
+Route::namespace('\App\Http\Controllers\Admin')->prefix('admin')->as('admin')->group(function(){
+    Route::get('dashboard','AdminController@dashboard')->name('dashboard');
+
+});

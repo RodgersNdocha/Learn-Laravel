@@ -9,6 +9,6 @@ class Testcontroller extends Controller
 {
     public function index(){
         
-    return response()->json(BlogCategory::all());
+    return view('admin.pages.dashboard');
     }
 }
